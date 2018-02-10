@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="view/assets/css/UsuarioView.css">
+</head>
+<body>
+<div class="container">
+    <!-- Cadastro de GerenciarUsuarios-->
+    <div class="col-md-1"></div>
+    <div class="col-md-9">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Alterar Usuário
+            </div>
+            <div class="panel-body">
+                {MENSAGEM}
+                <form id="form-gerencia" class="form-group" action="?id=0" method="post" enctype="multipart/form-data" >
+                    <input type="text" class="txtBox" name="nome" id="nome" placeholder="Nome: " required
+                           value="{VALOR_NOME}">
+
+                    <input type="email" class="txtBox" name="email" id="email" placeholder="Email: " required
+                           value="{VALOR_EMAIL}">
+
+                    <div onclick="habilitarAltSenha(div_senhas, chk_senha)">
+                        <label id="lb-alt-senha">
+                            Alterar senha?
+                            <input id="chk-alt-senha" name="chk-alt-senha" type="checkbox">
+                        </label>
+                    </div>
+
+                    <div id="alt-senha" class="disable">
+                        <input type="password" class="txtBox" name="old-senha" id="senha-antiga" placeholder="Senha Antiga: " >
+                        <input type="password" class="txtBox" name="new-senha" id="nova-senha" placeholder="Nova Senha: " >
+                    </div>
+
+                    <div class="image">
+                        <img id="img-alt" width="150px" src="{FOTO_ALTERAR}" class="img-circle" alt="User Image">
+                    </div>
+
+                    <input type="file" name="foto-alterar" id="foto-alterar">
+                    <p class="help-block">Selecione uma foto de seu usuario.</p>
+
+                    <select class="txtBox" name="nivel" id="nivel" required>
+                        <option value="">Nível de acesso:</option>
+                        <option value="0" {NIVEL0}>Administrador</option>
+                        <option value="1" {NIVEL1}>Gerente</option>
+                        <option value="2" {NIVEL2}>Funcionario</option>
+                    </select>
+                    <input type="hidden" value="{ID}" name="id-user" id="id-user">
+                    <button name="alterar" id="alterar" class="alterar" type="submit" value="alterar" >Alterar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

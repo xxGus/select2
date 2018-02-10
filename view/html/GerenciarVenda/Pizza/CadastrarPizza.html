@@ -1,0 +1,21 @@
+<div class="container {GERCANAL}">
+    <!-- Cadastro de GerenciarUsuarios-->
+    <div class="col-md-1"></div>
+    <div class="col-md-9">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Gerenciar Pizza
+            </div>
+            <div class="panel-body">
+                <form id="form-gerencia" class="form-group" action="" method="post" enctype="multipart/form-data">
+                    <input type="text" class="txtBox" name="pi-nome"  id="pi-nome" placeholder="Pizza: " required>
+                    <input type="text" class="txtBox" name="pi-ingrediente" id="pi-ingrediente" placeholder="Ingrediente: " required>
+                    <input type="text" class="txtBox" name="pi-valor" id="pi-valor" placeholder="Valor: " required>
+                    <button name="inserir" id="inserir" class="inserir" type="submit" onclick="verificaOpcs()" value="inserir">Inserir
+                    </button>
+                    {MENSAGEM}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

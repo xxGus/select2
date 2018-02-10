@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<body>
+<div class="container">
+    <!-- Cadastro de GerenciarUsuarios-->
+    <div class="col-md-1"></div>
+    <div class="col-md-9">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Cadastrar Usuário
+            </div>
+            <div class="panel-body">
+                {MENSAGEM}
+                <form id="form-gerencia" class="form-group" action="" method="post" enctype="multipart/form-data">
+                    <input type="text" class="txtBox" name="nome" id="nome" placeholder="Nome: " required>
+                    <input type="email" class="txtBox" name="email" id="email" placeholder="Email: " required>
+                    <input type="password" class="txtBox" name="senha" id="senha" placeholder="Senha: " required>
+                    <input type="file" name="foto" id="foto" required>
+                    <p class="help-block">Selecione uma foto de seu usuario.</p>
+
+                    <select class="txtBox" name="nivel" id="nivel" required>
+                        <option value="">Nível de acesso:</option>
+                        <option value="0">Administrador</option>
+                        <option value="1">Gerente</option>
+                        <option value="2">Funcionario</option>
+                    </select>
+                    <button name="cadastrar" id="cadastrar" class="cadastrar" type="submit" onclick="verificaOpcs()">Cadastrar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

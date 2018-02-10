@@ -1,0 +1,22 @@
+
+<div class="container">
+    <!-- Cadastro de GerenciarUsuarios-->
+    <div class="col-md-1"></div>
+    <div class="col-md-9">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Alterar Cliente
+            </div>
+            <div class="panel-body">
+                <form id="form-gerencia" class="form-group" action="ViewCliente.php" method="post" enctype="multipart/form-data">
+                    <input type="text" class="txtBox" name="nome" id="nome" placeholder="Nome: " value="{VALUE_NOME}" required>
+                    <input type="text" class="txtBox" name="url" id="url" placeholder="Url: " value="{VALUE_URL}" required>
+                    <input type="text" class="txtBox" name="id-view" id="id-view" placeholder="Id-View: " value="{VALUE_IDVIEW}" required>
+                    <input type="hidden" value="{ID}" name="id-cliente" id="id-cliente">
+                    <button name="alterar" id="alterar" class="cadastrar" type="submit">Alterar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
