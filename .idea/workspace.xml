@@ -5,74 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76dbeb6e-d9c5-4d2b-9df7-3ae4ae78667c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/control/CtrlClienteSistema.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/control/DAO/DAOClienteSistema.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/model/ClienteSistema.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/view/assets/js/pedido.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/view/html/GerenciarPedido/Cliente/AlterarCliente.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/view/html/GerenciarPedido/Cliente/CadastrarCliente.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/view/html/GerenciarPedido/Cliente/ListarCliente.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/view/html/GerenciarPedido/ListarPedido.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/view/php/ViewClienteSistema.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/control/Config.php" afterPath="$PROJECT_DIR$/control/Config.php" />
-      <change beforePath="$PROJECT_DIR$/control/CtrlCliente.php" afterPath="$PROJECT_DIR$/control/CtrlCliente.php" />
-      <change beforePath="$PROJECT_DIR$/control/CtrlPizza.php" afterPath="$PROJECT_DIR$/control/CtrlPizza.php" />
-      <change beforePath="$PROJECT_DIR$/control/CtrlProduto.php" afterPath="$PROJECT_DIR$/control/CtrlProduto.php" />
-      <change beforePath="$PROJECT_DIR$/control/CtrlUsuario.php" afterPath="$PROJECT_DIR$/control/CtrlUsuario.php" />
-      <change beforePath="$PROJECT_DIR$/control/DAO/ConnectionFactory.php" afterPath="$PROJECT_DIR$/control/DAO/ConnectionFactory.php" />
-      <change beforePath="$PROJECT_DIR$/control/DAO/DAOCliente.php" afterPath="$PROJECT_DIR$/control/DAO/DAOCliente.php" />
-      <change beforePath="$PROJECT_DIR$/control/DAO/DAOPizza.php" afterPath="$PROJECT_DIR$/control/DAO/DAOPizza.php" />
-      <change beforePath="$PROJECT_DIR$/control/DAO/DAOProduto.php" afterPath="$PROJECT_DIR$/control/DAO/DAOProduto.php" />
-      <change beforePath="$PROJECT_DIR$/control/DAO/DAOUsuario.php" afterPath="$PROJECT_DIR$/control/DAO/DAOUsuario.php" />
-      <change beforePath="$PROJECT_DIR$/dump/relatorios-google.sql" afterPath="$PROJECT_DIR$/dump/relatorios-google.sql" />
-      <change beforePath="$PROJECT_DIR$/lib/raelgc/view/Template.php" afterPath="$PROJECT_DIR$/lib/raelgc/view/Template.php" />
-      <change beforePath="$PROJECT_DIR$/model/Cliente.php" afterPath="$PROJECT_DIR$/model/Cliente.php" />
-      <change beforePath="$PROJECT_DIR$/model/Menu.php" afterPath="$PROJECT_DIR$/model/Menu.php" />
-      <change beforePath="$PROJECT_DIR$/model/Pizza.php" afterPath="$PROJECT_DIR$/model/Pizza.php" />
-      <change beforePath="$PROJECT_DIR$/model/Produto.php" afterPath="$PROJECT_DIR$/model/Produto.php" />
-      <change beforePath="$PROJECT_DIR$/model/Usuario.php" afterPath="$PROJECT_DIR$/model/Usuario.php" />
       <change beforePath="$PROJECT_DIR$/view/assets/css/sass.css" afterPath="$PROJECT_DIR$/view/assets/css/sass.css" />
       <change beforePath="$PROJECT_DIR$/view/assets/css/sass.css.map" afterPath="$PROJECT_DIR$/view/assets/css/sass.css.map" />
       <change beforePath="$PROJECT_DIR$/view/assets/css/sass.scss" afterPath="$PROJECT_DIR$/view/assets/css/sass.scss" />
-      <change beforePath="$PROJECT_DIR$/view/assets/js/base.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/view/assets/js/url.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/CHANGELOG.md" afterPath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/CHANGELOG.md" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/CONTRIBUTING.md" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_forms.scss" afterPath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_forms.scss" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/tasks/converter/less_conversion.rb" afterPath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/tasks/converter/less_conversion.rb" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/tasks/converter/logger.rb" afterPath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/tasks/converter/logger.rb" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/tasks/converter/network.rb" afterPath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/tasks/converter/network.rb" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/test/node_mincer_test.rb" afterPath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/test/node_mincer_test.rb" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/test/sass_test.rb" afterPath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/test/sass_test.rb" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/test/sprockets_rails_test.rb" afterPath="$PROJECT_DIR$/view/bower_components/bootstrap-sass-3.3.7/test/sprockets_rails_test.rb" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/bootstrap/Gruntfile.js" afterPath="$PROJECT_DIR$/view/bower_components/bootstrap/Gruntfile.js" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/bootstrap/less/forms.less" afterPath="$PROJECT_DIR$/view/bower_components/bootstrap/less/forms.less" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/bootstrap/less/glyphicons.less" afterPath="$PROJECT_DIR$/view/bower_components/bootstrap/less/glyphicons.less" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/bootstrap/less/mixins/image.less" afterPath="$PROJECT_DIR$/view/bower_components/bootstrap/less/mixins/image.less" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/font-awesome/less/path.less" afterPath="$PROJECT_DIR$/view/bower_components/font-awesome/less/path.less" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/font-awesome/scss/_path.scss" afterPath="$PROJECT_DIR$/view/bower_components/font-awesome/scss/_path.scss" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/view/bower_components/jquery/dist/jquery.js" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/jquery/src/ajax.js" afterPath="$PROJECT_DIR$/view/bower_components/jquery/src/ajax.js" />
-      <change beforePath="$PROJECT_DIR$/view/bower_components/jquery/src/ajax/jsonp.js" afterPath="$PROJECT_DIR$/view/bower_components/jquery/src/ajax/jsonp.js" />
-      <change beforePath="$PROJECT_DIR$/view/html/GerenciarClientes/AlterarClientes.html" afterPath="$PROJECT_DIR$/view/html/GerenciarClientesSistema/AlterarClientesSistema.html" />
-      <change beforePath="$PROJECT_DIR$/view/html/GerenciarClientes/CadastrarClientes.html" afterPath="$PROJECT_DIR$/view/html/GerenciarClientesSistema/CadastrarClientesSistema.html" />
-      <change beforePath="$PROJECT_DIR$/view/html/GerenciarClientes/ListarClientes.html" afterPath="$PROJECT_DIR$/view/html/GerenciarClientesSistema/ListarClientesSistema.html" />
-      <change beforePath="$PROJECT_DIR$/view/html/GerenciarUsuarios/AlterarUsuario.html" afterPath="$PROJECT_DIR$/view/html/GerenciarUsuarios/AlterarUsuario.html" />
-      <change beforePath="$PROJECT_DIR$/view/html/GerenciarVenda/GerenciarUrls.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/view/html/GerenciarVenda/Pizza/AlterarPizza.html" afterPath="$PROJECT_DIR$/view/html/GerenciarPedido/Pizza/AlterarPizza.html" />
-      <change beforePath="$PROJECT_DIR$/view/html/GerenciarVenda/Pizza/CadastrarPizza.html" afterPath="$PROJECT_DIR$/view/html/GerenciarPedido/Pizza/CadastrarPizza.html" />
-      <change beforePath="$PROJECT_DIR$/view/html/GerenciarVenda/Pizza/ListarPizza.html" afterPath="$PROJECT_DIR$/view/html/GerenciarPedido/Pizza/ListarPizza.html" />
-      <change beforePath="$PROJECT_DIR$/view/html/GerenciarVenda/Produto/AlterarProduto.html" afterPath="$PROJECT_DIR$/view/html/GerenciarPedido/Produto/AlterarProduto.html" />
-      <change beforePath="$PROJECT_DIR$/view/html/GerenciarVenda/Produto/CadastrarProduto.html" afterPath="$PROJECT_DIR$/view/html/GerenciarPedido/Produto/CadastrarProduto.html" />
-      <change beforePath="$PROJECT_DIR$/view/html/GerenciarVenda/Produto/ListarProduto.html" afterPath="$PROJECT_DIR$/view/html/GerenciarPedido/Produto/ListarProduto.html" />
-      <change beforePath="$PROJECT_DIR$/view/html/GerenciarVenda/Venda.html" afterPath="$PROJECT_DIR$/view/html/GerenciarPedido/Pedido.html" />
-      <change beforePath="$PROJECT_DIR$/view/html/base.html" afterPath="$PROJECT_DIR$/view/html/base.html" />
-      <change beforePath="$PROJECT_DIR$/view/php/JsonCanal.php" afterPath="$PROJECT_DIR$/view/php/JsonCliente.php" />
-      <change beforePath="$PROJECT_DIR$/view/php/ViewCliente.php" afterPath="$PROJECT_DIR$/view/php/ViewCliente.php" />
-      <change beforePath="$PROJECT_DIR$/view/php/ViewPizza.php" afterPath="$PROJECT_DIR$/view/php/ViewPizza.php" />
-      <change beforePath="$PROJECT_DIR$/view/php/ViewProduto.php" afterPath="$PROJECT_DIR$/view/php/ViewProduto.php" />
-      <change beforePath="$PROJECT_DIR$/view/php/ViewVenda.php" afterPath="$PROJECT_DIR$/view/php/ViewPedido.php" />
+      <change beforePath="$PROJECT_DIR$/view/assets/js/pedido.js" afterPath="$PROJECT_DIR$/view/assets/js/pedido.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,8 +23,8 @@
       <file leaf-file-name="Pedido.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/html/GerenciarPedido/Pedido.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="51">
+              <caret line="67" column="39" lean-forward="false" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -108,7 +45,7 @@
       <file leaf-file-name="CtrlCliente.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/control/CtrlCliente.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1734">
+            <state relative-caret-position="380">
               <caret line="109" column="45" lean-forward="false" selection-start-line="109" selection-start-column="45" selection-end-line="109" selection-end-column="45" />
               <folding>
                 <marker date="1518486366646" expanded="true" signature="809:827" ph="..." />
@@ -124,7 +61,17 @@
         <entry file="file://$PROJECT_DIR$/view/assets/js/pedido.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="448">
-              <caret line="150" column="2" lean-forward="false" selection-start-line="150" selection-start-column="2" selection-end-line="150" selection-end-column="2" />
+              <caret line="169" column="23" lean-forward="false" selection-start-line="169" selection-start-column="23" selection-end-line="169" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sass.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/assets/css/sass.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="255" column="20" lean-forward="false" selection-start-line="255" selection-start-column="20" selection-end-line="255" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -233,7 +180,6 @@
         <option value="$PROJECT_DIR$/view/html/GerenciarVenda/Produto/AlterarProduto.html" />
         <option value="$PROJECT_DIR$/view/php/ViewPedido.php" />
         <option value="$PROJECT_DIR$/view/assets/js/url.js" />
-        <option value="$PROJECT_DIR$/view/assets/css/sass.scss" />
         <option value="$PROJECT_DIR$/view/html/GerenciarClientesSistema/CadastrarClientes.html" />
         <option value="$PROJECT_DIR$/view/html/GerenciarClientesSistema/AlterarClientes.html" />
         <option value="$PROJECT_DIR$/model/Pizza.php" />
@@ -270,6 +216,7 @@
         <option value="$PROJECT_DIR$/control/DAO/DAOPizza.php" />
         <option value="$PROJECT_DIR$/control/DAO/DAOProduto.php" />
         <option value="$PROJECT_DIR$/view/html/GerenciarPedido/Pedido.html" />
+        <option value="$PROJECT_DIR$/view/assets/css/sass.scss" />
         <option value="$PROJECT_DIR$/view/assets/js/pedido.js" />
       </list>
     </option>
@@ -389,6 +336,21 @@
               <item name="select2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="select2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="select2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sass.scss" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="select2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="select2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -411,7 +373,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../select-delivery" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="node.js.detected.package.jscs" value="true" />
@@ -429,12 +391,12 @@
     <property name="SearchEverywhereHistoryKey" value="wra&#9;ACTION&#9;EditorGutterToggleGlobalSoftWraps" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\html\select2\view\assets\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\html\relatorios-google\view\php" />
       <recent name="C:\wamp64\www\html\relatorios-google\control" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\html\select2\view\assets\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -488,15 +450,16 @@
       <workItem from="1518264257919" duration="20000" />
       <workItem from="1518350511855" duration="12023000" />
       <workItem from="1518442096139" duration="34223000" />
-      <workItem from="1518527817504" duration="41000" />
+      <workItem from="1518527817504" duration="3847000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309096000" />
+    <option name="totallyTimeSpent" value="312902000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2632353" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -570,13 +533,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/assets/js/url.js" />
-    <entry file="file://$PROJECT_DIR$/view/assets/css/sass.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="250" column="16" lean-forward="false" selection-start-line="250" selection-start-column="16" selection-end-line="250" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/control/CtrlPagina.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
@@ -880,19 +836,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/control/CtrlCliente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="109" column="45" lean-forward="false" selection-start-line="109" selection-start-column="45" selection-end-line="109" selection-end-column="45" />
-          <folding>
-            <marker date="1518486366646" expanded="true" signature="809:827" ph="..." />
-            <marker date="1518486366646" expanded="true" signature="987:1005" ph="..." />
-            <marker date="1518486366646" expanded="true" signature="1956:1974" ph="..." />
-            <marker date="1518486366646" expanded="true" signature="2132:2150" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/php/JsonCliente.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -905,8 +848,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/html/GerenciarPedido/Pedido.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        <state relative-caret-position="51">
+          <caret line="67" column="39" lean-forward="false" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control/CtrlCliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="109" column="45" lean-forward="false" selection-start-line="109" selection-start-column="45" selection-end-line="109" selection-end-column="45" />
+          <folding>
+            <marker date="1518486366646" expanded="true" signature="809:827" ph="..." />
+            <marker date="1518486366646" expanded="true" signature="987:1005" ph="..." />
+            <marker date="1518486366646" expanded="true" signature="1956:1974" ph="..." />
+            <marker date="1518486366646" expanded="true" signature="2132:2150" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/assets/css/sass.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="255" column="20" lean-forward="false" selection-start-line="255" selection-start-column="20" selection-end-line="255" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -914,7 +878,7 @@
     <entry file="file://$PROJECT_DIR$/view/assets/js/pedido.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
-          <caret line="150" column="2" lean-forward="false" selection-start-line="150" selection-start-column="2" selection-end-line="150" selection-end-column="2" />
+          <caret line="169" column="23" lean-forward="false" selection-start-line="169" selection-start-column="23" selection-end-line="169" selection-end-column="23" />
           <folding />
         </state>
       </provider>

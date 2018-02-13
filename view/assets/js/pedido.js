@@ -153,3 +153,20 @@ form_pedido.onsubmit = function (ev) {
 document.addEventListener('DOMContentLoaded', function () {
     carregar();
 });
+
+fechar_pedido = document.getElementById('fechar-pedido');
+
+fechar_pedido.onclick = function (ev) {
+    var w = window.open();
+    w.document.open();
+    w.document.write('<html>');
+    w.document.write('<head>');
+    w.document.write('</head>');
+    w.document.write('<body>');
+    w.document.write(document.getElementById('resumo-pedido').innerHTML);
+    w.document.write('</body>');
+    w.document.write('</html>');
+    w.print();
+    w.document.close();
+    w.close();
+};

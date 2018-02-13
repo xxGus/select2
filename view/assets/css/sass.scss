@@ -250,3 +250,12 @@ hr{
   color: #ffffff;
   display: none;
 }
+
+@media print {
+  @page  {
+    size: landscape;
+  }
+  body{
+    height: auto  
+  }
+}
