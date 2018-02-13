@@ -30,14 +30,14 @@ class DAOProduto
         $resultado->execute(array($produto->getNome()));
 
         if ($resultado->rowCount() == 0) {
-            $query = "insert into produto(nome, valor, id_cliente) values (?, ?, ?)";
+            $query = "insert into produto(nome, valor, id_cliente_sistema) values (?, ?, ?)";
             $resultado = $pdo->prepare($query);
 
             return
                 $resultado->execute(array(
                     $produto->getNome(),
                     $produto->getValor(),
-                    $produto->getIdCliente()
+                    $produto->getIdClienteSistema()
                 ));
         }
 
@@ -63,7 +63,7 @@ class DAOProduto
         $objConnectionFactory = new ConnectionFactory();
         $pdo = $objConnectionFactory->getConnectionFactory();
 
-        $query = "select nome, valor, id_cliente from produto where id= ?";
+        $query = "select nome, valor, id_cliente_sistema from produto where id= ?";
         $resultado = $pdo->prepare($query);
 
         $resultado->execute([
@@ -74,35 +74,26 @@ class DAOProduto
 
         $produto->setNome($userBD->nome);
         $produto->setValor($userBD->valor);
-        $produto->setIdCliente($userBD->id_cliente);
+        $produto->setIdClienteSistema($userBD->id_cliente_sistema);
 
         return $produto;
     }
 
     public function alterar(Produto $produto)
     {
+
         $objConnectionFactory = new ConnectionFactory();
         $pdo = $objConnectionFactory->getConnectionFactory();
 
-        $query = "select * from produto where nome = ?";
+        $query = "update produto set nome = ?, valor = ? where id = ?";
         $resultado = $pdo->prepare($query);
 
-        $resultado->execute([
-            $produto->getNome()
-        ]);
+        return $resultado->execute(array(
+            $produto->getNome(),
+            $produto->getValor(),
+            $produto->getId()
+        ));
 
-        if ($resultado->rowCount() == 0) {
-            $query = "update campanha set nome = ?, valor = ? where id = ?";
-            $resultado = $pdo->prepare($query);
-            return
-                $resultado->execute(array(
-                    $produto->getNome(),
-                    $produto->getValor(),
-                    $produto->getId()
-                ));
-        }
-
-        return false;
     }
 
     public function remover(Produto $produto)
@@ -125,48 +116,25 @@ class DAOProduto
             $produtos = [];
             $objConnectionFactory = new ConnectionFactory();
             $pdo = $objConnectionFactory->getConnectionFactory();
-            $query = "select po.id, po.nome, po.valor, po.id_cliente from produto as po inner join cliente on po.id_cliente = cliente.id where cliente.id = ? order by c.id";
+            $query = "select po.id, po.nome, po.valor, po.id_cliente_sistema from produto as po inner join cliente_sistema on po.id_cliente_sistema = cliente_sistema.id where cliente_sistema.id = ? order by po.id";
 
             $resultado = $pdo->prepare($query);
             $resultado->execute([
                 $id
             ]);
 
+
             while ($po = $resultado->fetch(PDO::FETCH_OBJ)) {
+
                 $produto = new Produto();
                 $produto->setId($po->id);
                 $produto->setNome($po->nome);
                 $produto->setValor($po->valor);
-                $produto->setIdCliente($po->id_cliente);
+                $produto->setIdClienteSistema($po->id_cliente_sistema);
                 array_push($produtos, $produto);
             }
 
             return $produtos;
-
-        } catch (PDOException $ex) {
-            echo $ex->getMessage();
-        }
-    }
-
-    public function listaJSON($id)
-    {
-        try {
-            $campanhas = [];
-            $objConnectionFactory = new ConnectionFactory();
-            $pdo = $objConnectionFactory->getConnectionFactory();
-
-            $query = "select c.id, c.nome, c.id_cliente from campanha as c inner join cliente on c.id_cliente = cliente.id where cliente.id = ? order by c.id";
-
-            $resultado = $pdo->prepare($query);
-            $resultado->execute(array(
-                $id
-            ));
-
-            while ($c = $resultado->fetch(PDO::FETCH_OBJ)) {
-                array_push($campanhas, $c);
-            }
-
-            return json_encode($campanhas);
 
         } catch (PDOException $ex) {
             echo $ex->getMessage();

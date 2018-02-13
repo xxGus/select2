@@ -1,0 +1,115 @@
+<div class="container">
+    <!-- Cadastro de GerenciarUsuarios-->
+    <div class="col-md-11">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Gerar Pedido
+            </div>
+            <div class="panel-body">
+                <form id="form-pedido" action="#" class="form-group">
+
+                    <h2>Dados da Entrega</h2>
+                    <hr>
+                    <input type="tel" class="txtBox" name="telefone" id="telefone" data-telefone
+                           placeholder="Telefone:">
+                    <input type="text" class="txtBox" name="nome-cliente" id="nome-cliente"
+                           placeholder="Nome do Cliente:" data-nome>
+                    <input type="text" class="txtBox" name="endereco" id="endereco"
+                           placeholder="Endereço:" data-endereco>
+
+                    <button class="btn btn-primary ajustarBotao" id="add-cliente">
+                        Adicionar Cliente
+                    </button>
+                    <h2>Dados do Pedido</h2>
+                    <hr>
+
+                    <select name="" id="select-pizza" class="form-control">
+                        <option value="0">Pizza:</option>
+                        <!-- BEGIN BLOCK_PIZZA -->
+                        <option id="valor-pizza" value="{VALOR_PIZZA}">{PIZZA}</option>
+                        <!-- END BLOCK_PIZZA -->
+                        <option></option>
+                        <!-- FINALLY BLOCK_PIZZA -->
+                    </select>
+
+                    <input id="qtd-pizza" type="number" placeholder="Quant.:" value="1" min="1" max="100">
+
+                    <button class="btn btn-primary ajustarBotao" id="add-pizza"
+                            onclick="adicionar(selectPizza, resumoPizza, qtdPizza)">Adicionar Pizza
+                    </button>
+
+                    <select name="" id="select-produto" class="form-control">
+                        <option value="">Produto:</option>
+                        <!-- BEGIN BLOCK_PRODUTO -->
+                        <option id="valor-produto" value="{VALOR_PRODUTO}">{PRODUTO}</option>
+                        <!-- END BLOCK_PRODUTO -->
+                        <option></option>
+                        <!-- FINALLY BLOCK_PRODUTO -->
+                    </select>
+
+                    <input id="qtd-produto" type="number" placeholder="Quant.:" value="1" min="1" max="100">
+
+                    <button class="btn btn-primary ajustarBotao" id="add-produto" value="addProduto"
+                            onclick="adicionar(selectProduto, resumoProduto, qtdProduto)">Adicionar Produto
+                    </button>
+
+
+                    <select id="tipo-pagamento" class="form-control">
+                        <option value="">Pagamento:</option>
+                        <option value="0">Dinheiro</option>
+                        <option value="1">Cartão Débito</option>
+                        <option value="2">Cartão Crédito</option>
+                    </select>
+
+                    <input id="comentario" type="text" class="form-control ajusteTxtPedido" placeholder="Comentário:">
+
+
+                    <div class="">
+                        <div id="resumo-pedido" class="panel panel-default">
+                            Resumo do pedido:
+                            <div>
+                                <p id="res-tel">Telefone:</p>
+                                <p id="res-nome">Nome do Cliente:</p>
+                                <p id="res-local">Local de entrega:</p>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Pizza</th>
+                                    <th>Valor</th>
+                                    <th>Quantidade</th>
+                                </tr>
+                                </thead>
+                                <tbody id="resumo-pizza">
+
+                                </tbody>
+                            </table>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Produto</th>
+                                    <th>Valor</th>
+                                    <th>Quantidade</th>
+                                </tr>
+                                </thead>
+                                <tbody id="resumo-produto">
+
+                                </tbody>
+                            </table>
+                            <hr>
+                            Comentário: <br>
+                            <textarea id="coment" class="form-control" readonly></textarea>
+                            <hr>
+                            Total a pagar: R$ <span id="total-pagar"></span>
+                            <hr>
+                            Tipo de pagamento: <span id="tipo-pag-selected"></span>
+                        </div>
+                    </div>
+                    <button name="fechar-pedido" id="fechar-pedido" class="btn btn-success form-control" type="submit">
+                        Fechar Pedido
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

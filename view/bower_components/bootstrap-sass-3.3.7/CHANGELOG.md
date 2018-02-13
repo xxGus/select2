@@ -128,7 +128,7 @@ It can be required without adding Bootstrap JS directory to load path, as it now
 
 ## 2.3.1.2
 
-* Fix changes to image url - *Gleb Mazovetskiy*
+* Fix changes to image bloqueado - *Gleb Mazovetskiy*
 * Copy _variables into project on Compass install - *Phil Thompson*
 * Add `bootstrap-affix` to the Compass template file - *brief*
 

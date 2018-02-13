@@ -7,13 +7,13 @@
                 Gerenciar Pizza
             </div>
             <div class="panel-body">
+                {MENSAGEM}
                 <form id="form-gerencia" class="form-group" action="" method="post" enctype="multipart/form-data">
-                    <input type="text" class="txtBox" name="pi-nome"  id="pi-nome" placeholder="Pizza: " required>
+                    <input type="text" class="txtBox" name="pi-pizza"  id="pi-pizza" placeholder="Pizza: " required>
                     <input type="text" class="txtBox" name="pi-ingrediente" id="pi-ingrediente" placeholder="Ingrediente: " required>
                     <input type="text" class="txtBox" name="pi-valor" id="pi-valor" placeholder="Valor: " required>
-                    <button name="inserir" id="inserir" class="inserir" type="submit" onclick="verificaOpcs()" value="inserir">Inserir
+                    <button name="inserir" id="inserir" class="inserir" type="submit" onclick="verificaOpcs()" value="inserir">Cadastrar
                     </button>
-                    {MENSAGEM}
                 </form>
             </div>
         </div>

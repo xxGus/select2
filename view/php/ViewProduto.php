@@ -23,10 +23,10 @@ use control\Seguranca;
 use control\CtrlPagina;
 
 $id_usuario = $_SESSION['id'];
-$id_cliente = $_SESSION['id_cliente'];
+$id_cliente_sistema = $_SESSION['id_cliente_sistema'];
 
 $pagina = new Template("../html/base.html");
-$pagina->addFile("LISTA", "../html/GerenciarVenda/Produto/ListarProduto.html");
+$pagina->addFile("LISTA", "../html/GerenciarPedido/Produto/ListarProduto.html");
 
 Seguranca::chkLogin()
     ? Config::configUsuario($id_usuario, $pagina)
@@ -36,14 +36,14 @@ $ctrlProduto = new CtrlProduto();
 
 $ctrlPagina = new CtrlPagina(
     $pagina, $id_usuario,
-    "../html/GerenciarVenda/Produto/CadastrarProduto.html",
-    "../html/GerenciarVenda/Produto/AlterarProduto.html");
+    "../html/GerenciarPedido/Produto/CadastrarProduto.html",
+    "../html/GerenciarPedido/Produto/AlterarProduto.html");
 
 if (isset($_POST['inserir'])) {
     $nome = $_POST['pro-nome'];//$_POST['pag-campanha']
     $valor = $_POST['pro-valor'];//new field
 
-    $pagina->MENSAGEM = $ctrlProduto->cadastrar($nome, $valor, $id_cliente);
+    $pagina->MENSAGEM = $ctrlProduto->cadastrar($nome, $valor, $id_cliente_sistema);
 }
 
 if (isset($_GET['id'])) {
@@ -59,9 +59,7 @@ if (isset($_POST['atualiza'])) {
     $produto = $_POST['pro-nome'];//$_POST['pag-campanha']
     $valor = $_POST['pro-valor'];//new field
 
-    $ctrlProduto->alterar($id, $produto, $valor);
-
-    $pagina->MENSAGEM = $ctrlProduto->alterar($id, $nome, $valor);
+    $pagina->MENSAGEM = $ctrlProduto->alterar($id, $produto, $valor);
 }
 
 if (isset($_POST['id-remove'])) $ctrlProduto->remover($_POST['id-remove']);

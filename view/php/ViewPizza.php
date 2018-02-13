@@ -23,10 +23,10 @@ use control\Seguranca;
 use control\CtrlPagina;
 
 $id_usuario = $_SESSION['id'];
-$id_cliente = $_SESSION['id_cliente'];
+$id_cliente_sistema = $_SESSION['id_cliente_sistema'];
 
 $pagina = new Template("../html/base.html");
-$pagina->addFile("LISTA", "../html/GerenciarVenda/Pizza/ListarPizza.html");
+$pagina->addFile("LISTA", "../html/GerenciarPedido/Pizza/ListarPizza.html");
 
 Seguranca::chkLogin()
     ? Config::configUsuario($id_usuario, $pagina)
@@ -36,16 +36,16 @@ $ctrlPizza = new CtrlPizza();
 
 $ctrlPagina = new CtrlPagina(
     $pagina, $id_usuario,
-    "../html/GerenciarVenda/Pizza/CadastrarPizza.html",
-    "../html/GerenciarVenda/Pizza/AlterarPizza.html");
+    "../html/GerenciarPedido/Pizza/CadastrarPizza.html",
+    "../html/GerenciarPedido/Pizza/AlterarPizza.html");
 
 
 if (isset($_POST['inserir'])) {
-    $nome = $_POST['pi-nome'];//$_POST['canal']
-    $ingrediente = $_POST['pi-ingrediente'];//$_POST['source']
-    $valor = $_POST['pi-valor'];//$_POST['medium']
+    $nome = $_POST['pi-pizza'];
+    $ingrediente = $_POST['pi-ingrediente'];
+    $valor = $_POST['pi-valor'];
 
-    $pagina->MENSAGEM = $ctrlPizza->cadastrar($nome, $ingrediente, $valor, $id_cliente);
+    $pagina->MENSAGEM = $ctrlPizza->cadastrar($nome, $ingrediente, $valor, $id_cliente_sistema);
 }
 
 if (isset($_GET['id'])) {

@@ -20,7 +20,7 @@ class DAOPizza
     public function cadastrar(Pizza $pizza)
     {
         $connectionFactory = new ConnectionFactory();
-        $pdo = $connectionFactory->getConnection();
+        $pdo = $connectionFactory->getConnectionFactory();
 
         $query = "select * from pizza where nome = ?";
         $resultado = $pdo->prepare($query);
@@ -30,7 +30,7 @@ class DAOPizza
         ]);
 
         if ($resultado->rowCount() == 0) {
-            $query = "insert into pizza(nome, ingrediente, valor, id_cliente) values(?, ?, ?, ?)";
+            $query = "insert into pizza(nome, ingrediente, valor, id_cliente_sistema) values(?, ?, ?, ?)";
             $resultado = $pdo->prepare($query);
 
             return
@@ -38,7 +38,7 @@ class DAOPizza
                     $pizza->getNome(),
                     $pizza->getIngrediente(),
                     $pizza->getValor(),
-                    $pizza->getIdCliente()
+                    $pizza->getIdClienteSistema()
                 ));
         }
 
@@ -47,10 +47,11 @@ class DAOPizza
 
     public function buscar(Pizza $pizza)
     {
+
         $objConnectionFactory = new ConnectionFactory();
         $pdo = $objConnectionFactory->getConnectionFactory();
 
-        $query = "select nome, ingrediente, valor, id_cliente from canal where id= ?";
+        $query = "select nome, ingrediente, valor, id_cliente_sistema from pizza where id= ?";
 
         $resultado = $pdo->prepare($query);
         $resultado->execute([
@@ -62,7 +63,7 @@ class DAOPizza
         $pizza->setNome($userBD->nome);
         $pizza->setIngrediente($userBD->ingrediente);
         $pizza->setValor($userBD->valor);
-        $pizza->setIdCliente($userBD->id_cliente);
+        $pizza->setIdClienteSistema($userBD->id_cliente_sistema);
 
         return $pizza;
     }
@@ -72,27 +73,15 @@ class DAOPizza
         $objConnectionFactory = new ConnectionFactory();
         $pdo = $objConnectionFactory->getConnectionFactory();
 
-        $query = "select * from pizza where nome = ?";
+        $query = "update pizza set nome = ?, ingrediente = ?, valor = ? where id = ?";
         $resultado = $pdo->prepare($query);
-
-        $resultado->execute([
-            $pizza->getNome()
-        ]);
-
-        if ($resultado->rowCount() == 0) {
-            $query = "update pizza set nome = ?, ingrediente = ?, valor = ? where id = ?";
-            $resultado = $pdo->prepare($query);
-            return
-                $resultado->execute(array(
-                    $pizza->getNome(),
-                    $pizza->getIngrediente(),
-                    $pizza->getValor(),
-                    $pizza->getId()
-                ));
-
-        }
-
-        return false;
+        return
+            $resultado->execute(array(
+                $pizza->getNome(),
+                $pizza->getIngrediente(),
+                $pizza->getValor(),
+                $pizza->getId()
+            ));
     }
 
     public function remover(Pizza $pizza)
@@ -117,51 +106,23 @@ class DAOPizza
             $objConnectionFactory = new ConnectionFactory();
             $pdo = $objConnectionFactory->getConnectionFactory();
 
-            $query = "select pi.id, pi.nome, pi.ingrediente, pi.valor, pi.id_cliente from pizza as pi inner join cliente on pi.id_cliente = cliente.id where cliente.id = ? order by pi.id";
+            $query = "select pi.id, pi.nome, pi.ingrediente, pi.valor, pi.id_cliente_sistema from pizza as pi inner join cliente_sistema on pi.id_cliente_sistema = cliente_sistema.id where cliente_sistema.id = ? order by pi.id";
 
             $resultado = $pdo->prepare($query);
             $resultado->execute(array(
                 $id
             ));
 
-            while ($c = $resultado->fetch(PDO::FETCH_OBJ)) {
+            while ($pi = $resultado->fetch(PDO::FETCH_OBJ)) {
                 $pizza = new Pizza();
-                $pizza->setId($c->id);
-                $pizza->setNome($c->nome);
-                $pizza->setIngrediente($c->ingrediente);
-                $pizza->setValor($c->valor);
-                $pizza->setIdCliente($c->id_cliente);
+                $pizza->setId($pi->id);
+                $pizza->setNome($pi->nome);
+                $pizza->setIngrediente($pi->ingrediente);
+                $pizza->setValor($pi->valor);
+                $pizza->setIdClienteSistema($pi->id_cliente_sistema);
                 array_push($pizzas, $pizza);
             }
             return $pizzas;
-
-        } catch (PDOException $ex) {
-            echo $ex->getMessage();
-        }
-    }
-
-    public function listaJson($id)
-    {
-        try {
-            $canais = [];
-            $objConnectionFactory = new ConnectionFactory();
-            $pdo = $objConnectionFactory->getConnectionFactory();
-
-            $query = "select c.id, c.nome, c.source, c.medium, c.id_cliente from canal as c inner join cliente on c.id_cliente = cliente.id where cliente.id = ? order by c.id";
-
-            if ($id == 1) {
-                $query = "select c.id, c.nome, c.source, c.medium, c.id_cliente from canal as c inner join cliente on c.id_cliente = cliente.id order by c.id";
-            }
-
-            $resultado = $pdo->prepare($query);
-            $resultado->execute(array(
-                $id
-            ));
-
-            while ($c = $resultado->fetch(PDO::FETCH_OBJ)) {
-                array_push($canais, $c);
-            }
-            return json_encode($canais);
 
         } catch (PDOException $ex) {
             echo $ex->getMessage();

@@ -22,10 +22,8 @@ use raelgc\view\Template;
 use control\CtrlCliente;
 use control\CtrlPagina;
 
-$id_cliente = $_SESSION['id_cliente'];
-
 $pagina = new Template("../html/base.html");
-$pagina->addFile("LISTA", "../html/GerenciarClientes/ListarClientes.html");
+$pagina->addFile("LISTA", "../html/GerenciarPedido/Cliente/ListarCliente.html");
 
 Seguranca::chkLogin()
     ? Config::configUsuario($_SESSION['id'], $pagina)
@@ -33,55 +31,57 @@ Seguranca::chkLogin()
 
 Seguranca::chkCliente();
 
+$id_cliente_sistema = $_SESSION['id_cliente_sistema'];
+
 $ctrlPagina = new CtrlPagina(
-    $pagina, $id_cliente,
-    "../html/GerenciarClientes/CadastrarClientes.html",
-    "../html/GerenciarClientes/AlterarClientes.html"
+    $pagina, $id_cliente_sistema,
+    "../html/GerenciarPedido/Cliente/CadastrarCliente.html",
+    "../html/GerenciarPedido/Cliente/AlterarCliente.html"
 );
 
-$objCtrlCliente = new CtrlCliente();
+$ctrlCliente = new CtrlCliente();
 
 if(isset($_POST['cadastrar'])){
 
     $nome = $_POST['nome'];
-    $url = $_POST['url'];
-    $id_view = $_POST['id-view'];
+    $endereco = $_POST['endereco'];
+    $telefone = $_POST['telefone'];
+    $celular = $_POST['celular'];
 
-    $mensagem = $objCtrlCliente->cadastrar($nome, $url, $id_view);
-
-    !is_null($mensagem)
-        ? $pagina->MENSAGEM =  $mensagem
-        : $pagina->MENSAGEM = "Falha ao salvar dados, tente novamente.";
+    $pagina->MENSAGEM = $ctrlCliente->cadastrar($nome, $endereco, $telefone, $celular, $id_cliente_sistema);
 }
 
 if (isset($_GET['id'])) {
-    $cliente = $objCtrlCliente->buscar($_GET['id']);
+    $cliente = $ctrlCliente->buscar($_GET['id']);
     $pagina->ID = $cliente->getId();
-    $pagina->VALUE_NOME = $cliente->getNome();
-    $pagina->VALUE_URL = $cliente->getEndereco();
-    $pagina->VALUE_IDVIEW = $cliente->getTelefone();
+    $pagina->CLI_NOME = $cliente->getNome();
+    $pagina->CLI_END = $cliente->getEndereco();
+    $pagina->CLI_TEL = $cliente->getTelefone();
+    $pagina->CLI_CEL = $cliente->getCelular();
 }
 
 if (isset($_POST['alterar'])) {
 
     $id = $_POST['id-cliente'];
     $nome = $_POST['nome'];
-    $url = $_POST['url'];
-    $id_view = $_POST['id-view'];
+    $endereco = $_POST['endereco'];
+    $telefone = $_POST['telefone'];
+    $celular = $_POST['celular'];
 
-    $objCtrlCliente->alterar($id, $nome, $url, $id_view);
+    $pagina->MENSAGEM = $ctrlCliente->alterar($id, $nome, $endereco, $telefone, $celular);
 }
 
 if(isset($_POST['id-remove']))
-    $objCtrlCliente->remover($_POST['id-remove']);
+    $ctrlCliente->remover($_POST['id-remove']);
 
-$clientes = $objCtrlCliente->listar();
+$clientes = $ctrlCliente->listar();
 
 foreach ($clientes as $cliente) {
     $pagina->ID = $cliente->getId();
-    $pagina->CLIENTE = $cliente->getNomeEmpresa();
-    $pagina->URL = $cliente->getUrl();
-    $pagina->IDVIEW = $cliente->getIdView();
+    $pagina->CLIENTE = $cliente->getNome();
+    $pagina->END = $cliente->getEndereco();
+    $pagina->TEL = $cliente->getTelefone();
+    $pagina->CEL = $cliente->getCelular();
     $pagina->block("BLOCK_DADOS");
 }
 

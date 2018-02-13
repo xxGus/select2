@@ -12,7 +12,7 @@ require_once "ConnectionFactory.php";
 require_once __DIR__ . "/../../model/Usuario.php";
 require_once __DIR__ . "/../../model/Cliente.php";
 
-use model\Cliente;
+use model\ClienteSistema;
 use model\Usuario;
 use PDO;
 use PDOException;
@@ -33,7 +33,7 @@ class DAOUsuario
             ));
 
             if ($resultado->rowCount() == 0){
-                $query = "insert into usuario(nome, email, senha, foto, id_cliente, nivel) values (?,?,?,?,?,?)";
+                $query = "insert into usuario(nome, email, senha, foto, id_cliente_sistema, nivel) values (?,?,?,?,?,?)";
                 $resultado = $pdo->prepare($query);
 
                 return
@@ -41,7 +41,7 @@ class DAOUsuario
                         $usuario->getEmail(),
                         $usuario->getSenha(),
                         $usuario->getFoto(),
-                        $usuario->getIdCliente(),
+                        $usuario->getIdClienteSistema(),
                         $usuario->getNivel()));
             }
             return false;
@@ -56,7 +56,7 @@ class DAOUsuario
         $objConnectionFactory = new ConnectionFactory();
         $pdo = $objConnectionFactory->getConnectionFactory();
 
-        $query = "select u.nome, u.email, u.nivel, u.foto, u.id_cliente from usuario as u INNER JOIN cliente as c on u.id_cliente = c.id where u.id = ?";
+        $query = "select u.nome, u.email, u.nivel, u.foto, u.id_cliente_sistema from usuario as u INNER JOIN cliente_sistema as c on u.id_cliente_sistema = c.id where u.id = ?";
 
         $resultado = $pdo->prepare($query);
         $resultado->execute(array($usuario->getId()));
@@ -67,7 +67,7 @@ class DAOUsuario
                 $usuario->setEmail($userBD->email);
                 $usuario->setNivel($userBD->nivel);
                 $usuario->setFoto($userBD->foto);
-                $usuario->setIdCliente($userBD->id_cliente);
+                $usuario->setIdClienteSistema($userBD->id_cliente_sistema);
             }
         }
 
@@ -82,11 +82,11 @@ class DAOUsuario
         $campos = [
             $usuario->getNome(),
             $usuario->getEmail(),
-            $usuario->getIdCliente(),
+            $usuario->getIdClienteSistema(),
             $usuario->getNivel()
         ];
 
-        $query = "update usuario set nome = ?, email = ?, id_cliente = ?, nivel = ?";
+        $query = "update usuario set nome = ?, email = ?, id_cliente_sistema = ?, nivel = ?";
 //        $query = "update usuario set nome = ?, email = ?, foto = ?, id_cliente = ?, nivel = ? where id = ?";
 
 
@@ -128,7 +128,7 @@ class DAOUsuario
 
             $usuarios = [];
 
-            $query = "select u.id, u.nome, u.email, u.nivel, u.id_cliente, c.nome as nome_cliente from usuario as u right join cliente as c on u.id_cliente = c.id WHERE ? = c.id order by u.id_cliente";
+            $query = "select u.id, u.nome, u.email, u.nivel, u.id_cliente_sistema, c.nome as nome_cliente from usuario as u right join cliente_sistema as c on u.id_cliente_sistema = c.id WHERE ? = c.id order by u.id_cliente_sistema";
 
             $resultado = $pdo->prepare($query);
             $resultado->execute(array(

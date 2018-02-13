@@ -1,0 +1,26 @@
+
+<div class="container">
+    <!-- Cadastro de GerenciarUsuarios-->
+    <div class="col-md-1"></div>
+    <div class="col-md-9">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Alterar Cliente do Sistema
+            </div>
+            <div class="panel-body">
+                <form id="form-gerencia" class="form-group" action="ViewClienteSistema.php" method="post" enctype="multipart/form-data">
+
+                    <input type="text" class="txtBox" name="nome" id="nome" placeholder="Nome: " value="{VALOR_NOME}" required>
+                    <label class="form-control">
+                        Bloqueado:
+                        <input type="checkbox" class="" name="bloqueado" id="bloqueado" {VALOR_BLOQ}>
+                    </label>
+
+                    <input type="hidden" value="{ID}" name="id-cliente-sistema" id="id-cliente-sistema">
+                    <button name="alterar" id="alterar" class="cadastrar" type="submit">Alterar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

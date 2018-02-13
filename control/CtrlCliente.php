@@ -14,31 +14,30 @@ require_once __DIR__."/../model/Cliente.php";
 require_once __DIR__."/../model/Usuario.php";
 
 use model\Cliente;
-use model\Usuario;
 use control\DAO\DAOCliente;
 use Exception;
 
 class CtrlCliente
 {
-    public function cadastrar($nome, $url, $id_view)
+    public function cadastrar($nome, $endereco, $telefone, $celular, $id_cliente_sistema)
     {
         try{
-            $objClienteDAO = new DAOCliente();
+            $DAOCliente = new DAOCliente();
             $cliente = new Cliente();
 
             $cliente->setNome($nome);
-            $cliente->setEndereco($url);
-            $cliente->setTelefone($id_view);
+            $cliente->setEndereco($endereco);
+            $cliente->setTelefone($telefone);
+            $cliente->setCelular($celular);
+            $cliente->setIdClienteSistema($id_cliente_sistema);
 
-            $id_cliente = $objClienteDAO->cadastrar($cliente);
+            $mensagem = "<p class='alert-danger' style='text-align: center'>Cliente já cadastrado, tente novamente.</p>";
 
-            if ($id_cliente != false){
-                $_SESSION['id_cliente'] = $id_cliente;
-                $_SESSION['new-cli'] =  "<p class='alert-success' style='text-align: center'>Cliente cadastrado com sucesso, cadastre um novo usuario.</p>";
-                header("Location: ViewUsuario.php");
-            }
+            if ($DAOCliente->cadastrar($cliente))
+                $mensagem = "<p class='alert-success' style='text-align: center'>Cliente cadastrado com sucesso!</p>";
 
-            return "<p class='alert-danger' style='text-align: center'>Cliente já existe, informe um novo cliente.</p>";
+
+            return $mensagem;
 
         } catch (Exception $exception){
             echo 'Erro: ' . $exception->getMessage();
@@ -48,28 +47,33 @@ class CtrlCliente
     public function buscar($id)
     {
         try{
-            $objClienteDAO = new DAOCliente();
+            $DAOCliente = new DAOCliente();
             $cliente = new Cliente();
             $cliente->setId($id);
-            return $objClienteDAO->buscar($cliente);
+            return $DAOCliente->buscar($cliente);
         } catch (Exception $exception){
             echo 'Erro: ' . $exception->getMessage();
         }
     }
 
-    public function alterar($id, $nome, $url, $id_view)
+    public function alterar($id, $nome, $endereco, $telefone, $celular)
     {
         try{
-            $objClienteDAO = new DAOCliente();
+            $DAOCliente = new DAOCliente();
             $cliente = new Cliente();
 
             $cliente->setId($id);
             $cliente->setNome($nome);
-            $cliente->setEndereco($url);
-            $cliente->setTelefone($id_view);
+            $cliente->setEndereco($endereco);
+            $cliente->setTelefone($telefone);
+            $cliente->setCelular($celular);
 
-            return $objClienteDAO->alterar($cliente);
+            $mensagem = "<p class='alert-danger' style='text-align: center'>Cliente já cadastrado, tente novamente.</p>";
 
+            if ($DAOCliente->alterar($cliente))
+                $mensagem = "<p class='alert-success' style='text-align: center'>Cliente alterado com sucesso!</p>";
+
+            return $mensagem;
         } catch (Exception $exception){
             echo 'Erro: ' . $exception->getMessage();
         }
@@ -78,11 +82,11 @@ class CtrlCliente
     public function remover($id)
     {
         try{
-            $objClienteDAO = new DAOCliente();
+            $DAOCliente = new DAOCliente();
             $cliente = new Cliente();
             $cliente->setId($id);
 
-            return $objClienteDAO->remover($cliente);
+            return $DAOCliente->remover($cliente);
 
         } catch (Exception $exception){
             echo 'Erro: ' . $exception->getMessage();
@@ -92,12 +96,21 @@ class CtrlCliente
     public function listar()
     {
         try{
-            $objClienteDAO = new DAOCliente();
-
-            return $objClienteDAO->listar();
-
+            $DAOCliente = new DAOCliente();
+            return $DAOCliente->listar($_SESSION['id_cliente_sistema']);
         } catch (Exception $exception){
             echo 'Erro: ' . $exception->getMessage();
         }
     }
+
+    public function listaJson()
+    {
+        try{
+        $DAOCliente = new DAOCliente();
+        return $DAOCliente->listaJson($_SESSION['id_cliente_sistema']);
+        } catch (Exception $e){
+            echo "Erro: " . $e->getMessage();
+        }
+    }
+
 }

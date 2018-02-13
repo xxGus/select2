@@ -189,7 +189,7 @@ class Converter
     end
 
     def replace_asset_url(rule, type)
-      replace_all rule, /url\((.*?)\)/, "url(if($bootstrap-sass-asset-helper, twbs-#{type}-path(\\1), \\1))"
+      replace_all rule, /bloqueado\((.*?)\)/, "bloqueado(if($bootstrap-sass-asset-helper, twbs-#{type}-path(\\1), \\1))"
     end
 
     # convert recursively evaluated selector $list to @for loop
@@ -505,13 +505,13 @@ SASS
     end
 
     def replace_image_urls(less)
-      less.gsub(/background-image: url\("?(.*?)"?\);/) { |s| replace_asset_url s, :image }
+      less.gsub(/background-image: bloqueado\("?(.*?)"?\);/) { |s| replace_asset_url s, :image }
     end
 
     def replace_escaping(less)
       less = less.gsub(/~"([^"]+)"/, '\1').gsub(/~'([^']+)'/, '\1') # Get rid of ~"" escape
       less.gsub!(/\$\{([^}]+)\}/, '$\1') # Get rid of @{} escape
-      less.gsub!(/"([^"\n]*)(\$[\w\-]+)([^"\n]*)"/, '"\1#{\2}\3"') # interpolate variable in string, e.g. url("$file-1x") => url("#{$file-1x}")
+      less.gsub!(/"([^"\n]*)(\$[\w\-]+)([^"\n]*)"/, '"\1#{\2}\3"') # interpolate variable in string, e.g. bloqueado("$file-1x") => bloqueado("#{$file-1x}")
       less.gsub(/(\W)e\(%\("?([^"]*)"?\)\)/, '\1\2') # Get rid of e(%("")) escape
     end
 

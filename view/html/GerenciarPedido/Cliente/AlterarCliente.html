@@ -1,0 +1,24 @@
+
+<div class="container">
+    <!-- Cadastro de GerenciarUsuarios-->
+    <div class="col-md-1"></div>
+    <div class="col-md-9">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Alterar Cliente do Sistema
+            </div>
+            <div class="panel-body">
+                <form id="form-gerencia" class="form-group" action="ViewCliente.php" method="post" enctype="multipart/form-data">
+
+                    <input type="text" class="txtBox" name="nome" id="nome" placeholder="Nome: " value="{CLI_NOME}" required>
+                    <input type="text" class="txtBox" name="endereco" id="endereco" placeholder="Endereço: " value="{CLI_END}" required>
+                    <input type="text" class="txtBox" name="telefone" id="telefone" placeholder="Telefone: " value="{CLI_TEL}" required>
+                    <input type="text" class="txtBox" name="celular" id="celular" placeholder="Celular: " value="{CLI_CEL}" required>
+                    <input type="hidden" name="id-cliente" value="{ID}">
+                    <button name="alterar" id="alterar" class="cadastrar" type="submit">Alterar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

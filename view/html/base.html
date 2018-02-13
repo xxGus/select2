@@ -23,9 +23,6 @@
 
     <link rel="stylesheet" href="../assets/css/sass.css">
 
-    <!-- Awesomplete -->
-    <link rel="stylesheet" href="../bower_components/awesomplete-gh-pages/awesomplete.css">
-    <script src="../bower_components/awesomplete-gh-pages/awesomplete.js" async></script>
 
     <!-- descobrir pra que serve-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -170,46 +167,27 @@ desired effect
                 </li>
                 <!-- END BLOCK_MENU -->
 
-                <!-- BEGIN BLOCK_BTN_CLI -->
-                <li class="treeview">
-                    <a href=""><i class="fa fa-link"></i> <span>Clientes</span>
-                        <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <!-- BEGIN BLOCK_CLIENTES -->
-                        <li >
-                            <form action='' method='post'>
-                                <input type='hidden' value='{ID_CLIENTE}' name='id-cli'>
-                                <button class="bto-clientes">{NOME_CLIENTE}</button>
-                            </form>
-                        <!-- END BLOCK_CLIENTES -->
-                        <li></li>
-                        <!-- FINALLY BLOCK_CLIENTES -->
-                    </ul>
-                </li>
-                <!-- END BLOCK_BTN_CLI -->
+                <!--- BEGIN BLOCK_BTN_CLI --->
+                <!--<li class="treeview">-->
+                    <!--<a href=""><i class="fa fa-link"></i> <span>Clientes do Sistema</span>-->
+                        <!--<span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>-->
+                    <!--</a>-->
+                    <!--<ul class="treeview-menu">-->
+                        <!--&lt;!&ndash;- BEGIN BLOCK_CLIENTES -&ndash;&gt;-->
+                        <!--<li >-->
+                            <!--<form action='' method='post'>-->
+                                <!--<input type='hidden' value='{ID_CLIENTE}' name='id-cli'>-->
+                                <!--<button class="bto-clientes">{NOME_CLIENTE}</button>-->
+                            <!--</form>-->
+                        <!--&lt;!&ndash;- END BLOCK_CLIENTES -&ndash;&gt;-->
+                        <!--<li></li>-->
+                        <!--&lt;!&ndash;- FINALLY BLOCK_CLIENTES -&ndash;&gt;-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--- END BLOCK_BTN_CLI --->
             </ul>
             <!-- /.sidebar-menu -->
 
-            <!-- Sidebar Menu
-            <ul id="menu-sd-bar" class="sidebar-menu" data-widget="tree">
-                <li class="header">MENU</li>
-                <li><a href="ViewUsuario.php" onclick="btnGerUsuarios()"><i class="fa fa-edit"></i>
-                    <span>Gerenciar Usuários</span></a></li>
-                <li id="gerClientes"><a href="ViewUsuario.php" onclick="btnGerUsuarios()"><i class="fa fa-edit"></i>
-                    <span>Gerenciar Clientes</span></a></li>
-                <li id="gerUrls" class="treeview">
-                    <a href="#" onclick="btnGerUrls()"><i class="fa fa-link"></i> <span>Gerenciar URLs</span>
-                        <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
-                    </a>
-                    <ul id="opcsGerUrls" class="treeview-menu">
-                        <li><a href="ViewUrl.php">URL</a></li>
-                        <li><a href="ViewPizza.php">Pizza</a></li>
-                        <li><a href="ViewProduto.php">Produto</a></li>
-                    </ul>
-                </li>
-            </ul>
-             /.sidebar-menu -->
         </section>
         <!-- /.sidebar -->
     </aside>
@@ -258,7 +236,9 @@ desired effect
 <!-- ./wrapper -->
 
 <!-- REQUIRED JS SCRIPTS -->
-
+<!-- Awesomplete -->
+<link rel="stylesheet" href="../bower_components/awesomplete-gh-pages/awesomplete.css">
+<script src="../bower_components/awesomplete-gh-pages/awesomplete.js" async></script>
 <!-- jQuery 3 -->
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
@@ -267,10 +247,8 @@ desired effect
 <script src="../assets/js/adminlte.min.js"></script>
 
 
-<script src="../assets/js/base.js"></script>
 <script src="../assets/js/UsuarioView.js"></script>
-<script src="../assets/js/url.js"></script>
-
+<script src="../assets/js/pedido.js"></script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->

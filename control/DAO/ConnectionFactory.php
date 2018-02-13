@@ -21,7 +21,7 @@ class ConnectionFactory{
     {
         try{
             $this->conn = new PDO($this->dbType.":host=".$this->host.";dbname=".$this->dbName, $this->user, $this->pass);
-            //$this->conn->exec("SET CHARACTER SET UTF8");
+            $this->conn->exec("SET CHARACTER SET UTF8");
             return $this->conn;
         }catch (PDOException $ex){
             echo "Error: ".$ex->getMessage();

@@ -25,7 +25,7 @@ class CtrlProduto
 
             $produto->setNome($nome);
             $produto->setValor($valor);
-            $produto->setIdCliente($id_cliente);
+            $produto->setIdClienteSistema($id_cliente);
 
             $mensagem = "<p class='alert-danger' style='text-align: center'>Produto já cadastrado, tente novamente.</p>";
 
@@ -65,7 +65,7 @@ class CtrlProduto
 
             $mensagem = "<p class='alert-danger' style='text-align: center'>Produto já cadastrado, tente novamente.</p>";
 
-            if ($DAOProduto->alterar($produto))
+                if ($DAOProduto->alterar($produto))
                 $mensagem = "<p class='alert-success' style='text-align: center'>Produto alterado com sucesso!</p>";
 
             return $mensagem;
@@ -92,7 +92,7 @@ class CtrlProduto
     {
         try {
             $DAOProduto = new DAOProduto();
-            return $DAOProduto->listar($_SESSION['id_cliente']);
+            return $DAOProduto->listar($_SESSION['id_cliente_sistema']);
         } catch (Exception $exception) {
             echo "Erro: " . $exception->getMessage();
         }

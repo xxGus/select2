@@ -8,14 +8,14 @@
                 Gerenciar Pizza
             </div>
             <div class="panel-body">
+                {MENSAGEM}
                 <form id="form-gerencia" class="form-group" action="ViewPizza.php" method="post" enctype="multipart/form-data">
-                    <input type="text" class="txtBox" name="pi-nome"  id="pi-nome" placeholder="Pizza: " value="{PI_NOME}" required>
+                    <input type="text" class="txtBox" name="pi-pizza"  id="pi-pizza" placeholder="Pizza: " value="{PI_NOME}" required>
                     <input type="text" class="txtBox" name="pi-ingrediente" id="pi-ingrediente" placeholder="Ingrediente: " value="{PI_INGRE}" required>
                     <input type="text" class="txtBox" name="pi-valor" id="pi-valor" placeholder="Valor: " value="{PI_VALOR}" required>
                     <input type="hidden" value="{ID}" name="pi-id" id="pi-id">
                     <button name="atualiza" id="atualiza" class="inserir" type="submit" value="atualiza">Alterar
                     </button>
-                    {MENSAGEM}
                 </form>
             </div>
         </div>

@@ -7,22 +7,22 @@ class Pizza{
     private $nome;
     private $ingrediente;
     private $valor;
-    private $id_cliente;
+    private $id_cliente_sistema;
 
     /**
      * @return mixed
      */
-    public function getIdCliente()
+    public function getIdClienteSistema()
     {
-        return $this->id_cliente;
+        return $this->id_cliente_sistema;
     }
 
     /**
-     * @param mixed $id_cliente
+     * @param mixed $id_cliente_sistema
      */
-    public function setIdCliente($id_cliente)
+    public function setIdClienteSistema($id_cliente_sistema)
     {
-        $this->id_cliente = $id_cliente;
+        $this->id_cliente_sistema = $id_cliente_sistema;
     }
 
     public function getId(){

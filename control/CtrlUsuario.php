@@ -28,7 +28,7 @@ class CtrlUsuario
             $usuario->setFoto($foto);
             $usuario->setNivel($nivel);
 
-            $usuario->setIdCliente($_SESSION['id_cliente']);
+            $usuario->setIdClienteSistema($_SESSION['id_cliente']);
 
             if($objUsuarioDAO->cadastrar($usuario) != false){
                 return true;
@@ -67,7 +67,7 @@ class CtrlUsuario
             $usuario->setId($id);
             $usuario->setNome($nome);
             $usuario->setEmail($email);
-            $usuario->setIdCliente($id_cliente);
+            $usuario->setIdClienteSistema($id_cliente);
             $usuario->setNivel($nivel);
 
             $usuario->setFoto($foto);

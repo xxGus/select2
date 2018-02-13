@@ -189,10 +189,10 @@ namespace raelgc\view {
 		}
 
 		/**
-		 * Check if file is a JsonCanal.php
+		 * Check if file is a JsonCliente.php
 		 */
 		private function isPHP($filename){
-			foreach(array('JsonCanal.php', '.php5', '.cgi') as $php){
+			foreach(array('JsonCliente.php', '.php5', '.cgi') as $php){
 				if(0 == strcasecmp($php, substr($filename, strripos($filename, $php)))) return true;
 			}
 			return false;

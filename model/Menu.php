@@ -14,28 +14,28 @@ class Menu
     {
         $menu = [
 
-            [
-                "URL_MENU" => "ViewCliente.php",
-                "CLASS_ICON" => "fa fa-edit",
-                "NOME_OPC" => "<span>Gerenciar Clientes</span>",
-                "SUBMENU" => false
-            ],
+//            [
+//                "URL_MENU" => "ViewClienteSistema.php",
+//                "CLASS_ICON" => "fa fa-edit",
+//                "NOME_OPC" => "<span>Cliente do Sistema</span>",
+//                "SUBMENU" => false
+//            ],
 
-            [
-                "URL_MENU" => "ViewUsuario.php",
-                "CLASS_ICON" => "fa fa-edit",
-                "NOME_OPC" => "<span>Gerenciar Usuários</span>",
-                "SUBMENU" => false
-            ],
+//            [
+//                "URL_MENU" => "ViewUsuario.php",
+//                "CLASS_ICON" => "fa fa-edit",
+//                "NOME_OPC" => "<span>Gerenciar Usuários</span>",
+//                "SUBMENU" => false
+//            ],
 
             [
                 "URL_MENU" => "#",
                 "CLASS_ICON" => "fa fa-link",
-                "NOME_OPC" => "<span>Gerenciar Urls</span><i class='fa fa-angle-left pull-right'></i>",
+                "NOME_OPC" => "<span>Gerenciar Pedidos</span><i class='fa fa-angle-left pull-right'></i>",
                 "SUBMENU" => [
                     [
-                        "URL_SUB" => "ViewVenda.php",
-                        "NOME_OPCSUB" => "URL"
+                        "URL_SUB" => "ViewPedido.php",
+                        "NOME_OPCSUB" => "Pedido"
                     ],
                     [
                         "URL_SUB" => "ViewPizza.php",
@@ -44,6 +44,10 @@ class Menu
                     [
                         "URL_SUB" => "ViewProduto.php",
                         "NOME_OPCSUB" => "Produto"
+                    ],
+                    [
+                        "URL_SUB" => "ViewCliente.php",
+                        "NOME_OPCSUB" => "Cliente"
                     ]
                 ]
             ]
@@ -58,7 +62,7 @@ class Menu
             $pagina->CLASS_ICON = $m_item['CLASS_ICON'];
             $classLi = "link-menu";
 
-            if ($id != 1 && $m_item['NOME_OPC'] == "<span>Gerenciar Clientes</span>") {
+            if ($id != 1 && $m_item['NOME_OPC'] == "<span>Cliente Sistema</span>") {
                 $classLi = ' disable';
             }
 

@@ -22,8 +22,8 @@ class Converter
       puts green "    #{name}"
     end
 
-    def log_http_get_file(url, cached = false)
-      s = "  #{'CACHED ' if cached}GET #{url}..."
+    def log_http_get_file(bloqueado, cached = false)
+      s = "  #{'CACHED ' if cached}GET #{bloqueado}..."
       if cached
         puts dark green s
       else

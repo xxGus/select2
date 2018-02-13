@@ -15,8 +15,23 @@ class Cliente
     private $endereco;
     private $telefone;
     private $celular;
-    private $bloqueado;
+    private $id_cliente_sistema;
 
+    /**
+     * @return mixed
+     */
+    public function getIdClienteSistema()
+    {
+        return $this->id_cliente_sistema;
+    }
+
+    /**
+     * @param mixed $id_cliente_sistema
+     */
+    public function setIdClienteSistema($id_cliente_sistema)
+    {
+        $this->id_cliente_sistema = $id_cliente_sistema;
+    }
     /**
      * @return mixed
      */
@@ -33,21 +48,6 @@ class Cliente
         $this->celular = $celular;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getBloqueado()
-    {
-        return $this->bloqueado;
-    }
-
-    /**
-     * @param mixed $bloqueado
-     */
-    public function setBloqueado($bloqueado)
-    {
-        $this->bloqueado = $bloqueado;
-    }
     /**
      * @return mixed
      */

@@ -2,34 +2,19 @@
 /**
  * Created by PhpStorm.
  * User: PC
- * Date: 30/09/2017
- * Time: 02:18
+ * Date: 12/02/2018
+ * Time: 12:45
  */
 
 namespace model;
 
-class Produto
+
+class ClienteSistema
 {
     private $id;
     private $nome;
-    private $valor;
-    private $id_cliente_sistema;
+    private $bloqueado;
 
-    /**
-     * @return mixed
-     */
-    public function getIdClienteSistema()
-    {
-        return $this->id_cliente_sistema;
-    }
-
-    /**
-     * @param mixed $id_cliente_sistema
-     */
-    public function setIdClienteSistema($id_cliente_sistema)
-    {
-        $this->id_cliente_sistema = $id_cliente_sistema;
-    }
     /**
      * @return mixed
      */
@@ -65,16 +50,16 @@ class Produto
     /**
      * @return mixed
      */
-    public function getValor()
+    public function getBloqueado()
     {
-        return $this->valor;
+        return $this->bloqueado;
     }
 
     /**
-     * @param mixed $valor
+     * @param mixed $bloqueado
      */
-    public function setValor($valor)
+    public function setBloqueado($bloqueado)
     {
-        $this->valor = $valor;
+        $this->bloqueado = $bloqueado;
     }
 }

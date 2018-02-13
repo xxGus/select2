@@ -8,17 +8,17 @@
 
 session_start();
 
-require_once __DIR__ . "/../../control/CtrlPizza.php";
+require_once __DIR__ . "/../../control/CtrlCliente.php";
 require_once __DIR__ . "/../../control/Seguranca.php";
 
-use control\CtrlPizza;
+use control\CtrlCliente;
 use control\Seguranca;
 
 Seguranca::chkCliente();
 
-$ctrlCanal = new CtrlPizza();
+$ctrlCliente = new CtrlCliente();
 
-$canais = $ctrlCanal->listaJson();
+$clientes = $ctrlCliente->listaJson();
 
 
-echo $canais;
+echo $clientes;

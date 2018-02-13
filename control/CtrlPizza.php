@@ -17,15 +17,16 @@ use Exception;
 
 class CtrlPizza
 {
-    public function cadastrar($nome, $ingrediente, $valor, $id_cliente)
+    public function cadastrar($nome, $ingrediente, $valor, $id_cliente_sistema)
     {
         try {
             $DAOPizza = new DAOPizza();
             $pizza = new Pizza();
+
             $pizza->setNome($nome);
             $pizza->setIngrediente($ingrediente);
             $pizza->setValor($valor);
-            $pizza->setIdCliente($id_cliente);
+            $pizza->setIdClienteSistema($id_cliente_sistema);
 
             $mensagem = "<p class='alert-danger' style='text-align: center'>Pizza já cadastrada, tente novamente.</p>";
 
@@ -93,17 +94,7 @@ class CtrlPizza
     {
         try {
             $DAOPizza = new DAOPizza();
-            return $DAOPizza->listar($_SESSION['id_cliente']);
-        } catch (Exception $exception) {
-            echo "Erro: " . $exception->getMessage();
-        }
-    }
-
-    public function listaJson()
-    {
-        try {
-            $DAOPizza = new DAOPizza();
-            return $DAOPizza->listaJson($_SESSION['id_cliente']);
+            return $DAOPizza->listar($_SESSION['id_cliente_sistema']);
         } catch (Exception $exception) {
             echo "Erro: " . $exception->getMessage();
         }

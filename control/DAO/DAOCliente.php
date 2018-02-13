@@ -31,18 +31,17 @@ class DAOCliente
             ));
 
             if ($resultado->rowCount() == 0) {
-                $query = "insert into cliente(nome, endereco, telefone, celular, bloqueado) VALUES (?, ?, ?, ?, ?)";
+                $query = "insert into cliente(nome, endereco, telefone, celular, id_cliente_sistema) VALUES (?, ?, ?, ?, ?)";
                 $resultado = $pdo->prepare($query);
 
-                $resultado->execute(array(
+                return $resultado->execute(array(
                     $cliente->getNome(),
                     $cliente->getEndereco(),
                     $cliente->getTelefone(),
                     $cliente->getCelular(),
-                    $cliente->getBloqueado()
+                    $cliente->getIdClienteSistema()
                 ));
 
-                return $pdo->lastInsertId();
             }
 
             return false;
@@ -56,7 +55,7 @@ class DAOCliente
     {
         $objConnectionFactory = new ConnectionFactory();
         $pdo = $objConnectionFactory->getConnectionFactory();
-        $query = "select * from cliente where id = ?";
+        $query = "select nome, endereco, telefone, celular, id_cliente_sistema from cliente where id = ?";
 
         $resultado = $pdo->prepare($query);
 
@@ -69,8 +68,7 @@ class DAOCliente
         $cliente->setEndereco($clienteBD->endereco);
         $cliente->setTelefone($clienteBD->telefone);
         $cliente->setCelular($clienteBD->celular);
-        $cliente->setBloqueado($clienteBD->bloqueado);
-
+        $cliente->setIdClienteSistema($clienteBD->id_cliente_sistema);
         return $cliente;
     }
 
@@ -79,14 +77,14 @@ class DAOCliente
         $objConnectionFactory = new ConnectionFactory();
         $pdo = $objConnectionFactory->getConnectionFactory();
 
-        $query = "select * from cliente WHERE nome = ?";
-        $resultado = $pdo->prepare($query);
-        $resultado->execute([
-            $cliente->getNome()
-        ]);
-
-        if ($resultado->rowCount() == 0) {
-            $query = "update cliente set nome = ?, endereco = ?, telefone = ?, celular = ?, bloqueado = ? where id = ?";
+//        $query = "select * from cliente WHERE nome = ?";
+//        $resultado = $pdo->prepare($query);
+//        $resultado->execute([
+//            $cliente->getNome()
+//        ]);
+//
+//        if ($resultado->rowCount() == 0) {
+            $query = "update cliente set nome = ?, endereco = ?, telefone  = ?, celular = ? where id = ?";
             $resultado = $pdo->prepare($query);
 
             return $resultado->execute(array(
@@ -94,11 +92,10 @@ class DAOCliente
                 $cliente->getEndereco(),
                 $cliente->getTelefone(),
                 $cliente->getCelular(),
-                $cliente->getBloqueado(),
                 $cliente->getId()
             ));
-        }
-        return false;
+//        }
+//        return false;
     }
 
     public function remover(Cliente $cliente)
@@ -106,31 +103,27 @@ class DAOCliente
         $objConnectionFactory = new ConnectionFactory();
         $pdo = $objConnectionFactory->getConnectionFactory();
 
-        $query = "delete from usuario where id_cliente = ?;
-                  delete from pizza where id_cliente = ?;
-                  delete from produto where id_cliente = ?;
-                  delete from cliente where id = ?;";
+        $query = "delete from cliente where id = ?";
 
         $resultado = $pdo->prepare($query);
 
         return $resultado->execute(array(
-            $cliente->getId(),
-            $cliente->getId(),
-            $cliente->getId(),
             $cliente->getId()
         ));
     }
 
-    public function listar()
+    public function listar($id)
     {
         try {
             $clientes = [];
 
             $objConnectionFactory = new ConnectionFactory();
             $pdo = $objConnectionFactory->getConnectionFactory();
-            $query = "select * from cliente";
+
+            $query = "select c.id, c.nome, c.endereco, c.telefone, c.celular, c.id_cliente_sistema from cliente as c inner join cliente_sistema on c.id_cliente_sistema = cliente_sistema.id where cliente_sistema.id = ? order by c.id";
+
             $resultado = $pdo->prepare($query);
-            $resultado->execute();
+            $resultado->execute([$id]);
 
             while ($c = $resultado->fetch(PDO::FETCH_OBJ)) {
                 $cliente = new Cliente();
@@ -139,7 +132,7 @@ class DAOCliente
                 $cliente->setEndereco($c->endereco);
                 $cliente->setTelefone($c->telefone);
                 $cliente->setCelular($c->celular);
-                $cliente->setBloqueado($c->bloqueado);
+                $cliente->setIdClienteSistema($c->id_cliente_sistema);
                 array_push($clientes, $cliente);
             }
 
@@ -147,6 +140,34 @@ class DAOCliente
 
         } catch (PDOException $e) {
             echo $e->getMessage();
+        }
+    }
+
+
+
+    public function listaJson($id){
+        try {
+
+            $clientes = [];
+            $objConnectionFactory = new ConnectionFactory();
+            $pdo = $objConnectionFactory->getConnectionFactory();
+
+            $query = "select c.id, c.nome, c.endereco, c.telefone, c.id_cliente_sistema from cliente as c inner join cliente_sistema on c.id_cliente_sistema = cliente_sistema.id where cliente_sistema.id = ? order by c.id";
+
+            if ($id == 1) {
+                $query = "select c.id, c.nome, c.endereco, c.telefone, c.id_cliente_sistema from cliente as c inner join cliente_sistema on c.id_cliente_sistema = cliente_sistema.id order by c.id";
+            }
+
+            $resultado = $pdo->prepare($query);
+            $resultado->execute([$id]);
+
+            while ($cli = $resultado->fetch(PDO::FETCH_OBJ)) {
+                array_push($clientes, $cli);
+            }
+            return json_encode($clientes);
+
+        } catch (PDOException $ex) {
+            echo $ex->getMessage();
         }
     }
 }

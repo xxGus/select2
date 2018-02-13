@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<body>
+<div class="container">
+
+    <!-- Tabela de gerencia-->
+
+    <div class="col-md-9 tabela">
+        <div class="panel panel-default">
+            <table class="table table-striped">
+                <!-- BEGIN BLOCK_LISTA -->
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>Cliente</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
+                    <th>Celular</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- BEGIN BLOCK_DADOS -->
+                <tr>
+                    <td><input type="hidden" value="{ID}"></td>
+                    <td>{CLIENTE}</td>
+                    <td>{END}</td>
+                    <td>{TEL}</td>
+                    <td>{CEL}</td>
+                    <td>
+                        {ALTERAR}
+                    </td>
+                    <td>
+                        {REMOVER}
+                    </td>
+                </tr>
+                <!-- END BLOCK_DADOS -->
+                </tbody>
+            </table>
+            <!-- END BLOCK_LISTA -->
+
+            <p class="alert-danger" align="center">Nenhum registro encontrado.</p>
+
+            <!-- FINALLY BLOCK_LISTA -->
+        </div>
+    </div>
+</div>
+</body>
+</html>

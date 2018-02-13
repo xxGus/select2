@@ -47,16 +47,16 @@ class Converter
     end
 
 
-    def get_file(url)
-      uri = URI(url)
+    def get_file(bloqueado)
+      uri = URI(bloqueado)
       cache_path = "./#@cache_path#{uri.path}#{uri.query.tr('?&=', '-') if uri.query}"
       FileUtils.mkdir_p File.dirname(cache_path)
       if File.exists?(cache_path)
-        log_http_get_file url, true
+        log_http_get_file bloqueado, true
         File.read(cache_path, mode: 'rb')
       else
-        log_http_get_file url, false
-        content = open(url).read
+        log_http_get_file bloqueado, false
+        content = open(bloqueado).read
         File.open(cache_path, 'wb') { |f| f.write content }
         content
       end
@@ -90,8 +90,8 @@ class Converter
       get_json("https://api.github.com/repos/#@repo/git/trees/#{sha}#{'?recursive=1' if recursive}")
     end
 
-    def get_json(url)
-      JSON.parse get_file(url)
+    def get_json(bloqueado)
+      JSON.parse get_file(bloqueado)
     end
   end
 end

@@ -43,7 +43,7 @@ Example:
 > 2. This is the second step
 > 3. Further steps, etc.
 >
-> `<url>` (a link to the reduced test case)
+> `<bloqueado>` (a link to the reduced test case)
 >
 > Any other information you want to share that is relevant to the issue being
 > reported. This might include the lines of code that you have identified as
