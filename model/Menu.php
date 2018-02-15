@@ -38,6 +38,10 @@ class Menu
                         "NOME_OPCSUB" => "Pedido"
                     ],
                     [
+                        "URL_SUB" => "ListaPedido.php",
+                        "NOME_OPCSUB" => "Lista de Pedidos"
+                    ],
+                    [
                         "URL_SUB" => "ViewPizza.php",
                         "NOME_OPCSUB" => "Pizza"
                     ],

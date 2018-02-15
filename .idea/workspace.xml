@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76dbeb6e-d9c5-4d2b-9df7-3ae4ae78667c" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/view/php/AjaxCliente.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/view/assets/css/sass.css" afterPath="$PROJECT_DIR$/view/assets/css/sass.css" />
-      <change beforePath="$PROJECT_DIR$/view/assets/css/sass.css.map" afterPath="$PROJECT_DIR$/view/assets/css/sass.css.map" />
-      <change beforePath="$PROJECT_DIR$/view/assets/css/sass.scss" afterPath="$PROJECT_DIR$/view/assets/css/sass.scss" />
+      <change beforePath="$PROJECT_DIR$/control/CtrlCliente.php" afterPath="$PROJECT_DIR$/control/CtrlCliente.php" />
+      <change beforePath="$PROJECT_DIR$/model/Menu.php" afterPath="$PROJECT_DIR$/model/Menu.php" />
       <change beforePath="$PROJECT_DIR$/view/assets/js/pedido.js" afterPath="$PROJECT_DIR$/view/assets/js/pedido.js" />
+      <change beforePath="$PROJECT_DIR$/view/html/GerenciarPedido/Cliente/CadastrarCliente.html" afterPath="$PROJECT_DIR$/view/html/GerenciarPedido/Cliente/CadastrarCliente.html" />
+      <change beforePath="$PROJECT_DIR$/view/html/GerenciarPedido/Pedido.html" afterPath="$PROJECT_DIR$/view/html/GerenciarPedido/Pedido.html" />
+      <change beforePath="$PROJECT_DIR$/view/php/ViewCliente.php" afterPath="$PROJECT_DIR$/view/php/ViewCliente.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,83 +23,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Pedido.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/html/GerenciarPedido/Pedido.html">
+      <file leaf-file-name="ViewPedido.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/php/ViewPedido.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="67" column="39" lean-forward="false" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+            <state relative-caret-position="-11">
+              <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JsonCliente.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/php/JsonCliente.php">
+      <file leaf-file-name="Menu.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model/Menu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-              <folding>
-                <element signature="e#221#245#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CtrlCliente.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/control/CtrlCliente.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="109" column="45" lean-forward="false" selection-start-line="109" selection-start-column="45" selection-end-line="109" selection-end-column="45" />
-              <folding>
-                <marker date="1518486366646" expanded="true" signature="809:827" ph="..." />
-                <marker date="1518486366646" expanded="true" signature="987:1005" ph="..." />
-                <marker date="1518486366646" expanded="true" signature="1956:1974" ph="..." />
-                <marker date="1518486366646" expanded="true" signature="2132:2150" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pedido.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/view/assets/js/pedido.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="169" column="23" lean-forward="false" selection-start-line="169" selection-start-column="23" selection-end-line="169" selection-end-column="23" />
+            <state relative-caret-position="-153">
+              <caret line="41" column="58" lean-forward="false" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sass.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/assets/css/sass.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="255" column="20" lean-forward="false" selection-start-line="255" selection-start-column="20" selection-end-line="255" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DAOCliente.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/control/DAO/DAOCliente.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2635">
-              <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
-              <folding>
-                <element signature="e#255#273#0#PHP" expanded="true" />
-                <marker date="1518487647398" expanded="true" signature="539:560" ph="select * fro... cliente_sistema" />
-                <marker date="1518487647398" expanded="true" signature="539:575" ph="select * fro... cliente" />
-                <marker date="1518487647398" expanded="true" signature="791:888" ph="insert into cliente... " />
-                <marker date="1518487647398" expanded="true" signature="1571:1657" ph="select nome,... cliente" />
-                <marker date="1518487647398" expanded="true" signature="2337:2373" ph="select * fro... cliente" />
-                <marker date="1518487647398" expanded="true" signature="2572:2654" ph="update cliente... " />
-                <marker date="1518487647398" expanded="true" signature="3194:3226" ph="delete from cliente... " />
-                <marker date="1518487647398" expanded="true" signature="3597:3806" ph="select c.id,... cliente" />
-                <marker date="1518487647398" expanded="true" signature="4730:4802" ph="select c.id,... canal" />
-                <marker date="1518487647398" expanded="true" signature="4730:4928" ph="select c.id,... cliente" />
-                <marker date="1518487647398" expanded="true" signature="4986:5155" ph="select c.id,... cliente" />
-                <marker date="1518487647398" expanded="true" signature="5064:5155" ph="select c.id,... canal" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -113,7 +55,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>awsCanal</find>
       <find>campanh</find>
       <find>campanha</find>
       <find>form-gerencia</find>
@@ -143,6 +84,7 @@
       <find>\&lt;ul class\=\&quot;treeview\-menu\&quot;\&gt;\n                        \&lt;\!\-\- BEGIN BLOCK_CLIENTES \-\-\&gt;\n                        \&lt;li \&gt;\n                            \&lt;form action\=\'\' method\=\'post\'\&gt;\n                                \&lt;input type\=\'hidden\' value\=\'\{ID_CLIENTE\}\' name\=\'id\-cli\'\&gt;\n                                \&lt;button class\=\&quot;bto\-clientes\&quot;\&gt;\{NOME_CLIENTE\}\&lt;\/button\&gt;\n                            \&lt;\/form\&gt;\n                        \&lt;\!\-\- END BLOCK_CLIENTES \-\-\&gt;\n                        \&lt;li\&gt;\&lt;\/li\&gt;\n                        \&lt;\!\-\- FINALLY BLOCK_CLIENTES \-\-\&gt;\n                    \&lt;\/ul\&gt;</find>
       <find>canal</find>
       <find>for</find>
+      <find>add-cli</find>
     </findStrings>
     <replaceStrings>
       <replace>$u</replace>
@@ -167,7 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/view/php/ViewUsuario.php" />
         <option value="$PROJECT_DIR$/view/html/GerenciarVenda/Produto/ListarProduto.html" />
         <option value="$PROJECT_DIR$/view/html/GerenciarVenda/Pizza/ListarPizza.html" />
         <option value="$PROJECT_DIR$/view/php/ViewLogin.php" />
@@ -197,27 +138,28 @@
         <option value="$PROJECT_DIR$/model/ClienteSistemaSistema.php" />
         <option value="$PROJECT_DIR$/model/Cliente.php" />
         <option value="$PROJECT_DIR$/control/CtrlPizza.php" />
-        <option value="$PROJECT_DIR$/view/html/GerenciarPedido/Cliente/CadastrarCliente.html" />
         <option value="$PROJECT_DIR$/view/html/GerenciarPedido/Cliente/AlterarCliente.html" />
         <option value="$PROJECT_DIR$/control/DAO/ConnectionFactory.php" />
         <option value="$PROJECT_DIR$/view/html/GerenciarPedido/Cliente/ListarCliente.html" />
-        <option value="$PROJECT_DIR$/view/php/ViewCliente.php" />
         <option value="$PROJECT_DIR$/control/CtrlProduto.php" />
         <option value="$PROJECT_DIR$/control/DAO/DAOClienteSistema.php" />
         <option value="$PROJECT_DIR$/view/html/GerenciarPedido/Produto/CadastrarProduto.html" />
         <option value="$PROJECT_DIR$/view/html/GerenciarPedido/Pizza/CadastrarPizza.html" />
-        <option value="$PROJECT_DIR$/model/Menu.php" />
         <option value="$PROJECT_DIR$/control/Config.php" />
         <option value="$PROJECT_DIR$/view/php/JsonCanal.php" />
         <option value="$PROJECT_DIR$/view/html/base.html" />
         <option value="$PROJECT_DIR$/view/php/JsonCliente.php" />
-        <option value="$PROJECT_DIR$/control/CtrlCliente.php" />
         <option value="$PROJECT_DIR$/control/DAO/DAOCliente.php" />
         <option value="$PROJECT_DIR$/control/DAO/DAOPizza.php" />
         <option value="$PROJECT_DIR$/control/DAO/DAOProduto.php" />
-        <option value="$PROJECT_DIR$/view/html/GerenciarPedido/Pedido.html" />
         <option value="$PROJECT_DIR$/view/assets/css/sass.scss" />
+        <option value="$PROJECT_DIR$/view/html/GerenciarPedido/Cliente/CadastrarCliente.html" />
+        <option value="$PROJECT_DIR$/view/php/ViewCliente.php" />
+        <option value="$PROJECT_DIR$/view/php/AjaxCliente.php" />
+        <option value="$PROJECT_DIR$/control/CtrlCliente.php" />
+        <option value="$PROJECT_DIR$/view/html/GerenciarPedido/Pedido.html" />
         <option value="$PROJECT_DIR$/view/assets/js/pedido.js" />
+        <option value="$PROJECT_DIR$/model/Menu.php" />
       </list>
     </option>
   </component>
@@ -255,6 +197,9 @@
             <id>Code quality toolsJavaScript</id>
           </State>
           <State>
+            <id>DOM issuesJavaScript</id>
+          </State>
+          <State>
             <id>Dockerfile issues</id>
           </State>
           <State>
@@ -278,7 +223,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>JSLint</id>
+            <id>InnerHTMLJS</id>
           </State>
         </selected-state>
       </profile-state>
@@ -300,7 +245,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -323,6 +267,11 @@
             <path>
               <item name="select2" type="b2602c69:ProjectViewProjectNode" />
               <item name="select2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="select2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="select2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -330,28 +279,6 @@
               <item name="select2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="select2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="select2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="select2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="select2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sass.scss" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="select2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="select2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="select2" type="b2602c69:ProjectViewProjectNode" />
@@ -363,17 +290,49 @@
               <item name="select2" type="b2602c69:ProjectViewProjectNode" />
               <item name="select2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="GerenciarPedido" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="select2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="select2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="GerenciarPedido" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Cliente" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="select2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="select2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="GerenciarPedido" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Pizza" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="select2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="select2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="GerenciarPedido" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Produto" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="select2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="select2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../select-delivery" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="node.js.detected.package.jscs" value="true" />
@@ -450,18 +409,19 @@
       <workItem from="1518264257919" duration="20000" />
       <workItem from="1518350511855" duration="12023000" />
       <workItem from="1518442096139" duration="34223000" />
-      <workItem from="1518527817504" duration="3847000" />
+      <workItem from="1518527817504" duration="6591000" />
+      <workItem from="1518643433493" duration="10569000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="312902000" />
+    <option name="totallyTimeSpent" value="326215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2632353" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26397058" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.50292826" order="9" side_tool="true" content_ui="tabs" />
@@ -497,12 +457,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/control/CtrlCliente.php</url>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="32" />
     </breakpoint-manager>
     <watches-manager />
@@ -517,26 +471,16 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/html/GerenciarPedido/Produto/AlterarProduto.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="17" column="133" lean-forward="true" selection-start-line="17" selection-start-column="133" selection-end-line="17" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/assets/js/base.js" />
-    <entry file="file://$PROJECT_DIR$/view/assets/js/UsuarioView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/assets/js/url.js" />
     <entry file="file://$PROJECT_DIR$/control/CtrlPagina.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="329">
           <caret line="51" column="59" lean-forward="false" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
+          <folding>
+            <marker date="1518219252145" expanded="true" signature="618:850" ph="..." />
+            <marker date="1518219252145" expanded="true" signature="1379:1599" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -572,13 +516,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/php/ViewPedido.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -692,6 +630,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -709,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/html/GerenciarPedido/Cliente/CadastrarCliente.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="67" lean-forward="false" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/control/DAO/ConnectionFactory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -727,6 +659,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-793">
           <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -737,24 +670,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/html/GerenciarPedido/Produto/CadastrarProduto.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="19" column="111" lean-forward="false" selection-start-line="19" selection-start-column="111" selection-end-line="19" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-697">
-          <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/control/Config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="2" selection-end-line="41" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -779,13 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/php/ViewCliente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-147">
-          <caret line="50" column="87" lean-forward="false" selection-start-line="50" selection-start-column="87" selection-end-line="50" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/php/JsonCampanha.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -800,9 +713,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/control/DAO/DAOProduto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="141" column="5" lean-forward="true" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control/DAO/DAOPizza.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="129" column="5" lean-forward="false" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/assets/css/sass.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4335">
+          <caret line="255" column="20" lean-forward="false" selection-start-line="255" selection-start-column="20" selection-end-line="255" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/html/GerenciarPedido/Produto/CadastrarProduto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="19" column="76" lean-forward="true" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/assets/js/UsuarioView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/php/JsonCliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/php/AjaxCliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <folding>
+            <element signature="e#234#258#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control/CtrlCliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-912">
+          <caret line="33" column="94" lean-forward="false" selection-start-line="33" selection-start-column="94" selection-end-line="33" selection-end-column="94" />
+          <folding>
+            <marker date="1518657308079" expanded="true" signature="809:827" ph="..." />
+            <marker date="1518657308079" expanded="true" signature="1020:1038" ph="..." />
+            <marker date="1518657308079" expanded="true" signature="1989:2007" ph="..." />
+            <marker date="1518657308079" expanded="true" signature="2165:2183" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/control/DAO/DAOCliente.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2635">
+        <state relative-caret-position="312">
           <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
           <folding>
             <element signature="e#255#273#0#PHP" expanded="true" />
@@ -822,63 +803,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/control/DAO/DAOProduto.php">
+    <entry file="file://$PROJECT_DIR$/view/assets/js/pedido.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="141" column="5" lean-forward="true" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
+        <state relative-caret-position="351">
+          <caret line="117" column="58" lean-forward="false" selection-start-line="117" selection-start-column="58" selection-end-line="117" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/control/DAO/DAOPizza.php">
+    <entry file="file://$PROJECT_DIR$/view/php/ViewCliente.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="129" column="5" lean-forward="false" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/php/JsonCliente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+        <state relative-caret-position="-164">
+          <caret line="33" column="54" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="54" />
           <folding>
-            <element signature="e#221#245#0#PHP" expanded="true" />
+            <element signature="e#408#427#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/html/GerenciarPedido/Cliente/CadastrarCliente.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="113" lean-forward="false" selection-start-line="10" selection-start-column="84" selection-end-line="10" selection-end-column="113" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/html/GerenciarPedido/Pedido.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="67" column="39" lean-forward="false" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+        <state relative-caret-position="221">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/control/CtrlCliente.php">
+    <entry file="file://$PROJECT_DIR$/view/php/ViewPedido.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="109" column="45" lean-forward="false" selection-start-line="109" selection-start-column="45" selection-end-line="109" selection-end-column="45" />
-          <folding>
-            <marker date="1518486366646" expanded="true" signature="809:827" ph="..." />
-            <marker date="1518486366646" expanded="true" signature="987:1005" ph="..." />
-            <marker date="1518486366646" expanded="true" signature="1956:1974" ph="..." />
-            <marker date="1518486366646" expanded="true" signature="2132:2150" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/assets/css/sass.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="255" column="20" lean-forward="false" selection-start-line="255" selection-start-column="20" selection-end-line="255" selection-end-column="20" />
+        <state relative-caret-position="-11">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/assets/js/pedido.js">
+    <entry file="file://$PROJECT_DIR$/model/Menu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="169" column="23" lean-forward="false" selection-start-line="169" selection-start-column="23" selection-end-line="169" selection-end-column="23" />
+        <state relative-caret-position="-153">
+          <caret line="41" column="58" lean-forward="false" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
           <folding />
         </state>
       </provider>

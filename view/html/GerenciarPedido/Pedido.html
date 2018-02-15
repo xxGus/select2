@@ -6,18 +6,19 @@
                 Gerar Pedido
             </div>
             <div class="panel-body">
-                <form id="form-pedido" action="#" class="form-group">
+                <form id="form-pedido" action="#" class="form-group" enctype="multipart/form-data">
 
                     <h2>Dados da Entrega</h2>
                     <hr>
+                    <input type="hidden" id="id-cliente">
                     <input type="tel" class="txtBox" name="telefone" id="telefone" data-telefone
-                           placeholder="Telefone:">
-                    <input type="text" class="txtBox" name="nome-cliente" id="nome-cliente"
+                           placeholder="Telefone:" required>
+                    <input type="text" class="txtBox" name="nome" id="nome-cliente"
                            placeholder="Nome do Cliente:" data-nome>
                     <input type="text" class="txtBox" name="endereco" id="endereco"
                            placeholder="Endereço:" data-endereco>
-
-                    <button class="btn btn-primary ajustarBotao" id="add-cliente">
+                    <input type="hidden" name="celular" value="0" required>
+                    <button name="cadastrar" value="cadastrar" class="btn btn-primary ajustarBotao" id="add-cliente">
                         Adicionar Cliente
                     </button>
                     <h2>Dados do Pedido</h2>
@@ -49,7 +50,7 @@
 
                     <input id="qtd-produto" type="number" placeholder="Quant.:" value="1" min="1" max="100">
 
-                    <button class="btn btn-primary ajustarBotao" id="add-produto" value="addProduto"
+                    <button class="btn btn-primary ajustarBotao" name='cadastrar' id="add-produto" value="addProduto"
                             onclick="adicionar(selectProduto, resumoProduto, qtdProduto)">Adicionar Produto
                     </button>
 
@@ -109,6 +110,9 @@
                         Fechar Pedido
                     </button>
                 </form>
+            </div>
+            <div id="resposta">
+
             </div>
         </div>
     </div>

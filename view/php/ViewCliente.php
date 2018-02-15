@@ -42,7 +42,6 @@ $ctrlPagina = new CtrlPagina(
 $ctrlCliente = new CtrlCliente();
 
 if(isset($_POST['cadastrar'])){
-
     $nome = $_POST['nome'];
     $endereco = $_POST['endereco'];
     $telefone = $_POST['telefone'];

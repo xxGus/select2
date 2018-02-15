@@ -33,7 +33,7 @@ class CtrlCliente
 
             $mensagem = "<p class='alert-danger' style='text-align: center'>Cliente já cadastrado, tente novamente.</p>";
 
-            if ($DAOCliente->cadastrar($cliente))
+            if ($DAOCliente->cadastrar($cliente) && $cliente->getTelefone() != '')
                 $mensagem = "<p class='alert-success' style='text-align: center'>Cliente cadastrado com sucesso!</p>";
 
 

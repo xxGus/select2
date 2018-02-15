@@ -115,6 +115,7 @@ telefone.addEventListener("awesomplete-selectcomplete", function (evt) {
             return cliente.telefone == evt.text.value;
         });
 
+        document.getElementById('id-nome').value = jsn.id;
         nome_cliente.value = jsn.nome;
         endereco.value = jsn.endereco;
 
@@ -142,6 +143,16 @@ document.getElementById('add-cliente').onclick = function (ev) {
         res_local.innerHTML = "Local de entrega: "+ endereco.dataset.endereco;
     }
 
+    var form = new FormData(document.getElementById('form-pedido'));
+    var xhr = new XMLHttpRequest();
+    var resposta = document.getElementById('resposta');
+    xhr.open("post", '../php/AjaxCliente.php', true);
+
+    xhr.onreadystatechange = function (ev2) {
+        console.log(xhr.responseText);
+    };
+
+    xhr.send(form);
 };
 
 form_pedido = document.getElementById('form-pedido');
@@ -166,7 +177,9 @@ fechar_pedido.onclick = function (ev) {
     w.document.write(document.getElementById('resumo-pedido').innerHTML);
     w.document.write('</body>');
     w.document.write('</html>');
+
     w.print();
     w.document.close();
     w.close();
+
 };
